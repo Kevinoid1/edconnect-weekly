@@ -1,0 +1,41 @@
+.first-cont{
+    display: flex;
+    
+}
+
+
+.second-cont{
+    display: flex;
+    flex: 1;
+    
+}
+.third-cont{
+    
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    order: 2;
+   
+}
+
+
+
+
+.first-link{
+    order: 3;
+    display: flex;
+    
+    
+}
+.second-link{
+    order: 2;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    
+}
+
+.loafer{
+    
+    
+}

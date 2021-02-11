@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class = "navbar navbar-expand navbar-dark bg-primary">
+            <a class = "navbar-brand" href = "index.html">Project Explorer</a>
+            
+            <nav class = "collapse navbar-collapse " id="navbarSupportedContent">
+                
+
+                <form method ="get" action= "search.html" class="form-inline" name = "searchForm">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+                <div class = "navbar-nav mr-auto nav-item">
+                    <a class = "nav-link" href="createproject.html">Submit</a>
+                    
+                </div>
+                <div class ="navbar-nav mr-0 nav-item">
+                    <a class = "nav-link" href="register.html">Signup</a>
+                    <a class = "nav-link" href="login.html">Login</a>
+                </div>  
+             </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="my-3 mx-auto container" >
+                <div class="my-5 w-75 mx-auto row">
+                    <div class="col">
+                        <h3>Login</h3>
+                        <form action="" method="" class="">
+                            <div class="form-group">
+                                <label for= "email" class="form-label">Email address</label>
+                                <input id ="email" type="email" name="email" placeholder="Enter email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for= "password"class="form-label">Password</label>
+                                <input id ="password" type="password" name="password" placeholder="Password" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        
+        
+        
+    </main>
+    
+</body>
+<footer class = "container">
+    <div class ="navbar navbar-expand navbar-light bg-light justify-content-end">
+         <span class= "navbar-text"> Project Explorer © 2020. <a href="https://edconnect.ng/">Edconnect</a></span>
+    </div>
+    
+</footer>
+</html>
