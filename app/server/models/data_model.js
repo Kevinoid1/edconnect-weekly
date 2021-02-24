@@ -8,7 +8,12 @@ class DataModel {
     }
 
     getById(id) {
-
+      let cond = this.data.find((object) =>{
+            return object.id === id
+        })
+        if (cond === undefined){
+            return null
+        } else return cond
     }
 
     save(obj) {
@@ -20,11 +25,26 @@ class DataModel {
     }
 
     update(obj, id) {
-
+        let cond = this.data.find((ob) => {
+            return ob.id === id
+        })
+        if (cond !== undefined){
+            for (let key in cond){
+                this.data[this.data.indexOf(cond)][key] = obj[key] || this.data[this.data.indexOf(cond)][key]
+            }
+            
+            return true
+        } else return false
     }
 
     delete(id) {
-
+        let len = this.data.length
+        this.data = this.data.filter((object) => {
+            return object.id !== id
+        })
+        if(this.data.length < len){
+            return true
+        } else return false
     }
 
     // this method will be overriden in the sub classes
