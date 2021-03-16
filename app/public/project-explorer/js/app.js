@@ -127,6 +127,7 @@ if (cookieVal){
         let userInfo = document.querySelector('.select-two');
         logout.text = 'Logout';
         logout.setAttribute('id', 'logout');
+        userInfo.setAttribute('id', 'username')
         userInfo.text = `Hi, ${data.firstname}`
         userInfo.setAttribute('href', '#');
         logout.addEventListener('click', function(){
