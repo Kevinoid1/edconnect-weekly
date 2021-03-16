@@ -177,7 +177,7 @@ if (window.location.href.includes('register.html')){
 if (window.location.href.includes('index.html')){
     window.onload = function(){
         getData('/api/projects').then((projects) =>{
-            console.log(projects);
+            //console.log(projects);
         let projectTitle =document.querySelectorAll('.card-title');
         let projectAuthors = document.querySelectorAll('.card-subtitle');
         let projectAbstract = document.querySelectorAll('.card-text');
@@ -239,12 +239,13 @@ if (window.location.href.includes('login.html')){
     
 
 if (window.location.href.includes('createproject.html')){
-    let cookiePresent = document.cookie.split(';').find((row) => row.startsWith('uid='))
+    let cookiePresent = cookieCheck('uid')
         if(cookiePresent){
             let form = document.querySelector('#createProjectForm');
             form.addEventListener('submit', function(event){
                 event.preventDefault();
                 let formValues = getFormValues('#createProjectForm .project');
+                console.log(formValues)
                 let arryAuthor = formValues.authors.split(', ');
                 formValues.authors = arryAuthor;
                 console.log(formValues);
@@ -255,6 +256,7 @@ if (window.location.href.includes('createproject.html')){
                     if (response.status ===200){
                         cond =true;
                     }
+                    console.log(response)
                     return response.json();
                 }).then((data) =>{
                     if (cond){
