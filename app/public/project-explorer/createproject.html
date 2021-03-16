@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+    <header>
+        <div class = "navbar navbar-expand navbar-dark bg-primary">
+            <a class = "navbar-brand" href = "index.html">Project Explorer</a>
+            
+            <nav class = "collapse navbar-collapse " id="navbarSupportedContent">
+                
+
+                <form method ='' action= "search.html" class="form-inline" name = "searchForm">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+                <div class = "navbar-nav mr-auto nav-item">
+                    <a class = "nav-link" href="createproject.html">Submit</a>
+                    
+                </div>
+                <div class ="navbar-nav mr-0 nav-item">
+                    <a class = "nav-link select-one" href="register.html">Signup</a>
+                    <a class = "nav-link select-two" href="login.html">Login</a>
+                </div>  
+             </nav>
+        </div>
+    </header>
+    <main>
+        <div class= "container my-3">
+            <div class = "mx-auto w-50 mt-5 row">
+                <div class="col insert">
+                    <h3 class = "mb-3">Submit Project</h3>
+                    <form name="submitProject" id= 'createProjectForm'>
+                        <div class="form-group">
+                            <label class="form-label" for="name">Project Name</label>
+                            <input id ="name" class="form-control project" type="text" name="name" placeholder="Enter project name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="abstract">Project Abstract</label>
+                            <textarea id ="abstract" class="form-control project" type="text" name="abstract" rows="8"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="authors">Author(s)</label>
+                            <input id="authors" class="form-control project" type="text" name="authors" placeholder="Enter author names (separated by comma)">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="tags">Tag(s)</label>
+                            <input id ="tags" class="form-control project" type="text" name="tags" placeholder="Use # to tag project with different topics (e.g. #javascript #mongodb)">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Continue</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        
+    </main>
+    <footer class = "my-5 container">
+        <div class ="navbar navbar-expand navbar-light bg-light justify-content-end">
+         <span class= "navbar-text"> Project Explorer © 2020. <a href="https://edconnect.ng/">Edconnect</a></span>
+        </div>
+   
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
