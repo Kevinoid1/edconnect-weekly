@@ -297,7 +297,7 @@ if (window.location.href.includes('createproject.html')){
             getData(`/api/users/${data.createdBy}`).then((response) =>{
                 console.log(response);
                let lastField = document.getElementById('project_author');
-               lastField.innerHTML = `<p class = "col">Created by<br><strong>${response.firstname} ${response.lastname}</strong></p>`;
+               lastField.textContent = `${response.firstname} ${response.lastname}`
                  
             })
         })
