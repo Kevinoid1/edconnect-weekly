@@ -284,13 +284,12 @@ if (window.location.href.includes('createproject.html')){
             projectName.textContent = data.name;
             let projectAbstract = document.getElementById('project_abstract');
             projectAbstract.textContent = data.abstract;
-            let projectAuthors = document.querySelectorAll('#project_authors > :first-child');
-                let returnedAuthors = data.authors;
-                if (data.authors.length ===2){
-                    projectAuthors.innerHTML = `${data.authors[0]}<br>${data.authors[1]}`;
-                } else {
-                    projectAuthors.innerHTML = `${data.authors[0]}<br>`;
-                }
+            const project_authors = document.getElementById("project_authors");
+
+                let authors = data.authors.map((item) => {
+                    return `<p class="card-text">${item}</p>`
+                }).join("");
+                project_authors.innerHTML = authors;
                 
             
             let projectTags = document.querySelector('#project_tags a');
